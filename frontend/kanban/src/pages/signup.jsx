@@ -46,7 +46,7 @@ function Signup (){
                 </div>
                 
                  <form onSubmit={handleSignup} className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
-                   <h2 className="text-2xl font-bold mb-6 text-gray-800">Sign Up</h2>
+                   <h2 className="text-2xl font-bold mb-6 dark:text-white">Sign Up</h2>
                     
                     {errorMsg && (
                         <div className="mb-4 p-3 bg-red-100 dark:bg-red-200 border-l-4  bg-red-50 border-l-4 border-red-500 text-red-700">
