@@ -9,7 +9,7 @@ function Signup (){
     const [confirmPassword , setConfirmPassword ] = useState('')
     const [isLoading , setIsLoading ] = useState(false)
     const [errorMsg , setErrorMsg ] = useState('')
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
 
     const handleSignup = async(e) =>{
           e.preventDefault();
@@ -26,9 +26,9 @@ function Signup (){
                 email,
                 password
             })
-        // navigate('/Login',{
-        //     state:{message:'Account Created SuccessFully'}
-        // })
+        navigate('/Login',{
+            state:{message:'Account Created SuccessFully'}
+        })
         }catch(error){
              console.error('signup error :',error)
              setErrorMsg(error.response?.data?.error || 'Signup Failed. Please Try Again ')
