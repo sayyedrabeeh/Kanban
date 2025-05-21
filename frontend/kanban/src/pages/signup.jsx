@@ -10,6 +10,32 @@ function Signup (){
     const [isLoading , setIsLoading ] = useState(false)
     const [errorMsg , setErrorMsg ] = useState('')
     const navigate = useNavigate()
+
+    const handleSignup = async(e) =>{
+          e.preventDefault();
+
+        if (password !== confirmPassword){
+            setErrorMsg('Password Not Match')
+            return 
+          }
+        setErrorMsg('')
+        setIsLoading(true)
+        try{
+            await axios.post('http://localhost:8000/signup/',{
+                username,
+                email,
+                password
+            })
+        navigate('/Login',{
+            state:{message:'Account Created SuccessFully'}
+        })
+        }catch(error){
+             console.error('signup error :',error)
+             setErrorMsg(error.response?.data?.error || 'Signup Failed. Please Try Again ')
+        }finally{
+            setIsLoading(false)
+        }
+    }
     
     return(
         <>
