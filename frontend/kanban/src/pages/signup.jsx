@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Signup (){
     const [username , setUsername ] = useState('')
@@ -154,9 +154,9 @@ function Signup (){
                     <div className="text-center mt-6">
                         <p className="text-gray-600 dark:text-gray-400">
                             Do You  have an account?{' '}
-                             <span className="text-blue-600 hover:underline font-medium  cursor-pointer">  
+                             <Link to={'/login'} className="text-blue-600 hover:underline font-medium  cursor-pointer">  
                                 Login
-                            </span>
+                            </Link>
                         </p>
                     </div> 
                 </form>

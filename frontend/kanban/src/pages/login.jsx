@@ -110,9 +110,9 @@ function Login() {
                     <div className="text-center mt-6">
                         <p className="text-gray-600 dark:text-gray-400">
                             Don't have an account?{' '}
-                             <span className="text-blue-600 hover:underline font-medium  cursor-pointer">  
+                             <Link to={'/signup'} className="text-blue-600 hover:underline font-medium  cursor-pointer">  
                                 Create an account
-                            </span>
+                            </Link>
                         </p>
                     </div> 
                 </form>
